@@ -23,6 +23,15 @@ And re-run:
 npm install
 ```
 
+Add to tailwind.config.js:
+
+```json
+plugins: [
+    require('tailwindcss-animate'),
+],
+```
+
+
 ## Usage:
 
 ```html
