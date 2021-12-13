@@ -38,13 +38,13 @@ require('tailwindcss-animate')
 
 ### Supported Classes:
 
-animate-duration-[1s,750ms,etc.] // animation-duration
-animate-timing-[linear|ease-in-out|etc.] // animation-timing-function
-animate-delay-[2s] // animation-delay
-animate-iteration-[1] // animation-iteration-count
-animate-direction-[normal|reverse|alternate|alternate-reverse] // animation-direction
-animation-fill-[none|forwards|backwards|both] // animation-fill-mode
-animate-state-[paused|running] // animation-play-state
+* animate-duration-[1s,750ms,etc.] // animation-duration
+* animate-timing-[linear|ease-in-out|etc.] // animation-timing-function
+* animate-delay-[2s] // animation-delay
+* animate-iteration-[1] // animation-iteration-count
+* animate-direction-[normal|reverse|alternate|alternate-reverse] // animation-direction
+* animation-fill-[none|forwards|backwards|both] // animation-fill-mode
+* animate-state-[paused|running] // animation-play-state
 
 
 ## Config Customization:
