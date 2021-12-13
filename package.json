@@ -1,15 +1,15 @@
 {
-  "name": "tailwindcss-animations",
-  "version": "2.0.0",
+  "name": "tailwindcss-animate",
+  "version": "1.0.0",
   "description": "Tailwind CSS plugin to generate animation utilities",
-  "author": "Benoît Rouleau <benoit.rouleau@icloud.com>",
-  "license": "ISC",
+  "author": "Casey Lee <caseyalee@gmail.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/benface/tailwindcss-animations.git"
+    "url": "https://github.com/caseyalee/tailwindcss-animate.git"
   },
-  "bugs": "https://github.com/benface/tailwindcss-animations/issues",
-  "homepage": "https://github.com/benface/tailwindcss-animations",
+  "bugs": "https://github.com/caseyalee/tailwindcss-animate/issues",
+  "homepage": "https://github.com/caseyalee/tailwindcss-animate",
   "scripts": {
     "test": "jest",
     "release": "f(){ release-it $1 && github-release-from-changelog ;};f"
@@ -23,6 +23,6 @@
     "jest-matcher-css": "^1.1.0",
     "postcss": "^7.0.32",
     "release-it": "^13.6.5",
-    "tailwindcss": "^1.5.1"
+    "tailwindcss": "^2.0"
   }
 }
