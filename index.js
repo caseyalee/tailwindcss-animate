@@ -7,12 +7,61 @@ const defaultTheme = {
   animations: {},
   animationDuration: {
     'default': '1s',
-    '0s': '0s',
-    '1s': '1s',
-    '2s': '2s',
-    '3s': '3s',
-    '4s': '4s',
-    '5s': '5s',
+    '0': '0s',
+    '100ms': '100ms',
+    '200ms': '200ms',
+    '250ms': '250ms',
+    '300ms': '300ms',
+    '350ms': '350ms',
+    '400ms': '400ms',
+    '450ms': '450ms',
+    '500ms': '500ms',
+    '550ms': '550ms',
+    '600ms': '600ms',
+    '650ms': '650ms',
+    '700ms': '700ms',
+    '750ms': '750ms',
+    '1000ms': '1000ms',
+    '1s':'1s',
+    '1250ms': '1250ms',
+    '1500ms': '1500ms',
+    '1750ms': '1750ms',
+    '2000ms': '2000ms',
+    '2s':'2s',
+    '2250ms': '2250ms',
+    '2500ms': '2500ms',
+    '2750ms': '2750ms',
+    '3000ms': '3000ms',
+    '3s':'3s'
+  },
+  animationDelay: {
+    'default': '0s',
+    '0': '0s',
+    '100ms':'100ms',
+    '200ms':'200ms',
+    '250ms':'250ms',
+    '300ms':'300ms',
+    '350ms':'350ms',
+    '400ms':'400ms',
+    '450ms':'450ms',
+    '500ms':'500ms',
+    '550ms':'550ms',
+    '600ms':'600ms',
+    '650ms':'650ms',
+    '700ms':'700ms',
+    '750ms':'750ms',
+    '1000ms':'1000ms',
+    '1s':'1s',
+    '1250ms':'1250ms',
+    '1500ms':'1500ms',
+    '1750ms':'1750ms',
+    '2000ms':'2000ms',
+    '2s':'2s',
+    '2250ms':'2250ms',
+    '2500ms':'2500ms',
+    '2750ms':'2750ms',
+    '3000ms':'3000ms',
+    '3s':'3s'
   },
   animationTimingFunction: {
     'default': 'ease',
@@ -21,15 +70,6 @@ const defaultTheme = {
     'ease-in': 'ease-in',
     'ease-out': 'ease-out',
     'ease-in-out': 'ease-in-out',
-  },
-  animationDelay: {
-    'default': '0s',
-    '0s': '0s',
-    '1s': '1s',
-    '2s': '2s',
-    '3s': '3s',
-    '4s': '4s',
-    '5s': '5s',
   },
   animationIterationCount: {
     'default': 'infinite',
@@ -172,13 +212,13 @@ module.exports = plugin(function({ theme, variants, e, addBase, addUtilities }) 
   };
 
   const animationsUtilities = {
-    '.animation-none': {
+    '.animate-none': {
       animationName: 'none',
     },
     ..._.fromPairs(
       _.map(animationsTheme, (value, modifier) => {
         return [
-          `.${e(`animation-${modifier}`)}`,
+          `.${e(`animate-name-${modifier}`)}`,
           {
             animationName: modifier,
             animationDuration: baseDuration === null ? null : [baseDuration, 'var(--animation-duration)'],
@@ -199,7 +239,7 @@ module.exports = plugin(function({ theme, variants, e, addBase, addUtilities }) 
         return [];
       }
       return [
-        `.${e(`animation-${modifier}`)}`,
+        `.${e(`animate-duration-${modifier}`)}`,
         {
           ...durationStyles(value),
         },
@@ -213,7 +253,7 @@ module.exports = plugin(function({ theme, variants, e, addBase, addUtilities }) 
         return [];
       }
       return [
-        `.${e(`animation-${modifier}`)}`,
+        `.${e(`animate-timing-${modifier}`)}`,
         {
           ...timingFunctionStyles(value),
         },
@@ -227,7 +267,7 @@ module.exports = plugin(function({ theme, variants, e, addBase, addUtilities }) 
         return [];
       }
       return [
-        `.${e(`animation-delay-${modifier}`)}`,
+        `.${e(`animate-delay-${modifier}`)}`,
         {
           ...delayStyles(value),
         },
@@ -241,7 +281,7 @@ module.exports = plugin(function({ theme, variants, e, addBase, addUtilities }) 
         return [];
       }
       return [
-        `.${e(`animation-${modifier}`)}`,
+        `.${e(`animate-iteration-${modifier}`)}`,
         {
           ...iterationCountStyles(value),
         },
@@ -255,7 +295,7 @@ module.exports = plugin(function({ theme, variants, e, addBase, addUtilities }) 
         return [];
       }
       return [
-        `.${e(`animation-${modifier}`)}`,
+        `.${e(`animate-direction-${modifier}`)}`,
         {
           ...directionStyles(value),
         },
@@ -280,7 +320,7 @@ module.exports = plugin(function({ theme, variants, e, addBase, addUtilities }) 
   const playStateUtilities = _.fromPairs(
     _.map(playStateTheme, (value, modifier) => {
       return [
-        `.${e(`animation-${modifier}`)}`,
+        `.${e(`animate-state-${modifier}`)}`,
         {
           animationPlayState: value,
         },
