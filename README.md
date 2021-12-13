@@ -28,7 +28,7 @@ Add to tailwind.config.js:
 ```json
 plugins: [
     require('tailwindcss-animate'),
-],
+]
 ```
 
 
